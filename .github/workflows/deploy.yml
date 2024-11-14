@@ -20,7 +20,8 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm ci  # Use `npm ci` for cleaner install without lockfile issues
+        run: npm install  # Replaced `npm ci` with `npm install`
+
 
       - name: Build project
         run: npm run build
