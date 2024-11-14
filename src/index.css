@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'genova';
+    src: url('./assets/fonts/CreatoDisplay-Regular.otf');
+    /* font-weight: bolder; */
+}
+
+@font-face {
+    font-family: 'titlefont';
+    src: url('./assets/fonts/LEMONMILK-Bold.otf');
+}
+
+@font-face {
+    font-family: 'hoverfont';
+    src: url('./assets/fonts/OutrequeMedium.ttf');
+}
+
+@font-face {
+    font-family: 'h1font';
+    src: url('./assets/fonts/SF-Pro-Display-Bold.otf');
+}
+
+@font-face {
+    font-family: 'paragrabhfont';
+    src: url('./assets/fonts/QuattrocentoSans-Regular.ttf');
+}
+
+*{
+    font-family: genova;
+}
+
+body::-webkit-scrollbar {
+    border-radius: 20px;
+    width: 10px;
+    background: transparent;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: blue;
+    border-radius: 20px;
+}
