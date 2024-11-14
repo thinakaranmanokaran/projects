@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PublicLayout from './layouts/public/PublicLayout';
 import NavData from './components/public/navigation/NavData';
+import NotFoundPage from './pages/NotFound';
 
 const Routers = () => {
     return (
@@ -14,6 +15,7 @@ const Routers = () => {
                         ))
                     ))
                 }
+                <Route path="*" element={<NotFoundPage />} /> {/* Catch-all route */}
             </Route>
         </Routes>
     );

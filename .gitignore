@@ -23,7 +23,7 @@ yarn-error.log*
 .vscode/
 .DS_Store
 
-# Ignore temporary build and test files
+# Temporary build and test files
 coverage/
 *.log
 
