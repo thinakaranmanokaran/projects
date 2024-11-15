@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/projects/',
+  server: {
+    headers: {
+      'Permissions-Policy': 'fullscreen=(self)' // Remove interest-cohort here
+    }
+  }
 })
