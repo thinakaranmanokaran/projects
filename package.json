@@ -2,7 +2,7 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://thinakaranmanokaran.github.io/Project-Manager",
+  "homepage": "https://thinakaranmanokaran.github.io/projects/",
   "type": "module",
   "scripts": {
     "dev": "vite",
