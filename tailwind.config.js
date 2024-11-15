@@ -46,12 +46,17 @@ module.exports = {
       },
       keyframes: {
         zoomIn: {
-          '0%': { transform: 'scale(0)', opacity: 0 },
-          '100%': { transform: 'scale(1)', opacity: 1 },
+          '0%': { transform: 'scale(0)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        zoomOut: {
+          '0%': { transform: 'scale(1)', opacity: '1' },
+          '100%': { transform: 'scale(0)', opacity: '0' },
         },
       },
       animation: {
-        zoomIn: 'zoomIn 0.3s ease-out',
+        zoomIn: 'zoomIn 0.5s ease-out forwards',
+        zoomOut: 'zoomOut 0.5s ease-out forwards',
       },
     },
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TemplatesDB from '../../data/templates/TemplatesDB';
 import { useLocation } from 'react-router-dom';
 import NavData from '../../components/public/navigation/NavData';
-import { CiShare1, CiHeart } from "react-icons/ci";
+import { CiShare1, CiHeart, CiMaximize1  } from "react-icons/ci";
 import ShowMore from '../../components/global/ShowMore';
 import BGBlur from '../../components/global/BGBlur';
 import { BiX } from "react-icons/bi";
@@ -40,9 +40,12 @@ const Pages = () => {
 
         return (
             <div className='fixed inset-0 z-40 flex justify-center items-center'>
-                <div className='bg-maxLight dark:bg-minDark shadow-lrg flex-col md:flex-row flex justify-center p-6 rounded-xl relative w-3/4 max-w-4/6'>
-                    <div className='md:w-2/5'>
-                        <img src={item.img} alt="" className='w-full h-40 md:h-72 object-cover object-top brightness-100 hover:brightness-50 transition-all duration-300 rounded-xl' />
+                <div className='bg-maxLight dark:bg-minDark animate-zoomIn shadow-lrg flex-col md:flex-row flex justify-center p-6 rounded-xl relative w-3/4 max-w-4/6'>
+                    <div className='md:w-2/5 relative  '>
+                        <div className='group' >
+                        <img src={item.img} alt="" className='w-full peer h-40 md:h-72  object-cover object-top brightness-100 group-hover:brightness-50 transition-all duration-300 rounded-xl' />
+                        { item.img && <a href={item.img} rel="noopener noreferrer" target='_blank' className=' peer-hover:block transition-all hover:text-maxLight scale-100 hover:scale-125 -translate-x-1/2 -translate-y-1/2 text-2xl hover:block hover:bg-minDarkOP rounded-full p-2 absolute top-1/2 left-1/2 hidden  ' ><CiMaximize1  /></a>}
+                        </div>
                         <div className='flex items-center justify-end dark:text-minLight mt-2  space-x-1 text-2xl'>
                             <span
                                 onClick={() => toggleLike(item.idkey)}
