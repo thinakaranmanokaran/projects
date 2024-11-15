@@ -1,8 +1,8 @@
 import React from "react";
-import { CiUser, CiHome, CiShoppingTag, CiSettings, CiStar,} from "react-icons/ci";
+import { CiUser, CiHome, CiShoppingTag, CiSettings, CiStar, } from "react-icons/ci";
 
 import { Pages as TemplatePages } from "./../../../pages/templates/index";
-import { Pages as ProjectPages  } from "./../../../pages/projects/index";
+import { Pages as ProjectPages } from "./../../../pages/projects/index";
 import { Home, Profile, Settings } from "./../../../pages/index";
 
 const NavData = [
