@@ -22,9 +22,9 @@ const Pages = () => {
             {/* Display ProjectDB title if there's a matching ID */}
             {matchingProject ? (
                 <div>
-                    <div className='flex items-center ' >
+                    <div className='md:flex items-center ' >
                         <div className='text-4xl mb-2 font-h1font dark:text-textWhite '>{matchingProject.title}</div>
-                        <a href={matchingProject.link} target='_blank' className='bg-green scale-100 hover:scale-110 transition-all  duration-300 cursor-pointer  px-2 py-1 rounded-lg ml-6 inline-flex items-center ' >{matchingProject.site}<span  className=' text-lg ml-2 flex items-center'>{matchingProject.siteicon}</span> </a>
+                        <a href={matchingProject.link} target='_blank' className='bg-green scale-100 text-xs md:text-base hover:scale-110 transition-all  duration-300 cursor-pointer  px-2 py-1 rounded-lg mb-2 md:mb-0 md:ml-6 inline-flex items-center ' >{matchingProject.site}<span  className=' text-xs md:text-lg ml-2 flex items-center'>{matchingProject.siteicon}</span> </a>
                         {/* <div className=' items-center ' >
                             <span className='bg-redd scale-100 hover:scale-110 transition-all duration-300 cursor-pointer  px-2 py-1 rounded-lg ml-6 inline-flex items-center ' >{matchingProject.fav}<span  className=' text-lg ml-2 flex items-center'>{matchingProject.favicon}</span> </span>
                             <span className='bg-yelloww scale-100 hover:scale-110 transition-all duration-300 cursor-pointer  px-2 py-1 rounded-lg ml-6 inline-flex items-center ' >{matchingProject.book}<span  className=' text-lg ml-2 flex items-center'>{matchingProject.bookicon}</span> </span>
