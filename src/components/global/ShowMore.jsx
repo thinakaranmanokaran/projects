@@ -7,7 +7,7 @@ const ShowMore = ({ text = "", minWords, maxWords, className }) => {
     const words = text.split(" ");
     const shouldTruncate = words.length > maxWords;
     const displayText = shouldTruncate && !isExpanded
-        ? words.slice(0, maxWords).join(" ") + "..."
+        ? words.slice(0, maxWords).join(" ") + ""
         : text;
 
     return (
@@ -16,9 +16,9 @@ const ShowMore = ({ text = "", minWords, maxWords, className }) => {
             {shouldTruncate && (
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="font-bold ml-2 hover:underline"
+                    className={`font-bold hover:underline ${isExpanded ? "ml-2" : "ml-0.5" } `}
                 >
-                    {isExpanded ? "Show Less" : ""}
+                    {isExpanded ? "Show Less" : "..."}
                 </button>
             )}
         </p>

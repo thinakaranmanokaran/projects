@@ -19,24 +19,24 @@ const Home = () => {
                 Discover cutting-edge tools, resources, and templates designed to streamline your projects. Explore my curated library of software tools, professional templates, and innovative dashboards that cater to various needs.
             </div>
             <div className="font-h1font text-3xl mb-4 dark:text-maxLight text-center  ">Latest Projects </div>
-            <div className='flex justify-around' >
+            <div className='md:flex justify-around space-y-4 md:space-y-0 ' >
                 <div>
                     <div className="flex flex-col space-y-4 ">
-                        <div className="p-4 bg-maxGray dark:bg-minDark  rounded-2xl w-fit  ">
+                        <div className="p-4 bg-maxGray dark:bg-minDark  rounded-2xl max-w-80 xl:w-96 w-full  ">
                             <h3 className="text-xl mb-3 dark:text-minGray font-semibold">{latestItem.title}</h3>
-                            <img className='w-80 h-52 object-cover object-top rounded-xl ' src={latestItem.img} alt="" srcset="" />
-                            <ShowMore className={`text-sm dark:text-textGray w-80 m-1 `} maxWords={20} text={`${latestItem.paragrabh || latestItem.overview}`} />
-                            <div className='flex justify-end' ><a href={latestItem.sitelink || latestItem.link} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block bg-green rounded-lg px-2 py-2 text-sm scale-100 transition-all duration-300  self-end hover:scale-110" > View Project </a></div>
+                            <img className='w-full h-40 md:w-80 md:h-52 object-cover object-top rounded-xl ' src={latestItem.img} alt="" srcset="" />
+                            <ShowMore className={`text-sm dark:text-textGray w-full m-1 `} maxWords={20} text={`${latestItem.overview}`} />
+                            <div className='flex justify-end' ><a href={latestItem.link} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block w-full md:w-fit text-center bg-green rounded-lg px-2 py-2 text-sm scale-100 transition-all duration-300  self-end hover:scale-110" > View Project </a></div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div className="flex flex-col space-y-4 ">
-                        <div className="p-4 bg-maxGray dark:bg-minDark  rounded-2xl w-fit  ">
+                        <div className="p-4 bg-maxGray dark:bg-minDark  rounded-2xl max-w-80 xl:w-96 w-full  ">
                             <h3 className="text-xl mb-3 dark:text-minGray font-semibold">{latestDesign.title}</h3>
-                            <img className='w-80 h-52 object-cover object-top rounded-xl ' src={latestDesign.img} alt="" srcset="" />
-                            <ShowMore className={`text-sm dark:text-textGray w-80 m-1 `} maxWords={20} text={`${latestDesign.paragrabh || latestDesign.overview}`} />
-                            <div className='flex justify-end' ><a href={latestDesign.sitelink || latestDesign.link} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block bg-green rounded-lg px-2 py-2 text-sm scale-100  transition-all duration-300  self-end hover:scale-110" > View Project </a></div>
+                            <img className=' w-full h-40 md:w-80 md:h-52 object-cover object-top rounded-xl ' src={latestDesign.img} alt="" srcset="" />
+                            <ShowMore className={`text-sm dark:text-textGray w-full  m-1 `} maxWords={20} text={`${latestDesign.paragrabh}`} />
+                            <div className='flex justify-end' ><a href={latestDesign.sitelink} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block w-full md:w-fit text-center bg-green rounded-lg px-2 py-2 text-sm scale-100  transition-all duration-300  self-end hover:scale-110" > View Project </a></div>
                         </div>
                     </div>
                 </div>
