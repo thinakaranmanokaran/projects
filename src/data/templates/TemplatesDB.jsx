@@ -5,7 +5,7 @@ import { Admin1, Admin2, Admin3, Admin4 } from "./../../assets/images/screenshot
 import { LandingPage1 } from "../../assets/images/screenshots/templates/landing-pages";
 import { PortfolioTemplate1, PortfolioTemplate2, PortfolioTemplate3, PortfolioTemplate4, PortfolioTemplate5, PortfolioTemplate6, PortfolioTemplate7, PortfolioTemplate8, PortfolioTemplate9 } from "../../assets/images/screenshots/templates/portfolios";
 
-const ProjectDB = [
+const TemplateDB = [
     {
         title: "Portfolio",
         preLink: "/templates",
@@ -211,4 +211,4 @@ const ProjectDB = [
     },
 ]
 
-export default ProjectDB;
+export default TemplateDB;

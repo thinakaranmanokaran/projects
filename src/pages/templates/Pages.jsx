@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TemplatesDB from '../../data/templates/TemplatesDB';
 import { useLocation } from 'react-router-dom';
 import NavData from '../../components/public/navigation/NavData';
 import { CiShare1, CiHeart, CiMaximize1  } from "react-icons/ci";
-import ShowMore from '../../components/global/ShowMore';
-import BGBlur from '../../components/global/BGBlur';
 import { BiX } from "react-icons/bi";
+import { SkeletonLoader, BGBlur, ShowMore } from "./../../components/global/index";
 
 const Pages = () => {
     const location = useLocation(); // Get the current path
@@ -27,6 +26,16 @@ const Pages = () => {
             [idkey]: !prevLikedItems[idkey]
         }));
     }
+
+    const [isLoading, setIsLoading] = useState(true);
+
+        // Simulate loading delay
+        useEffect(() => {
+            const timeout = setTimeout(() => {
+                setIsLoading(false);
+            }, 6000); // 2 seconds loading delay
+            return () => clearTimeout(timeout);
+        }, []);
 
     const [showPopUP, setShowPopUP] = useState(false);
     const [selectedItem, setSelectedItem] = useState(null);
@@ -88,13 +97,11 @@ const Pages = () => {
                                 >
                                     {list.img ? (
                                         <div>
-                                            <img
-                                                src={list.img}
-                                                alt=""
-                                                className='w-80 h-40 md:h-52 md:w-full rounded-xl object-cover object-top'
-                                            />
+                                            {
+                                                isLoading ? <SkeletonLoader  className={`w-52 h-40 md:h-52 md:w-72 xl:w-80 rounded-xl `} /> : <img src={list.img} alt="" className='w-80 h-40 md:h-52 md:w-full rounded-xl object-cover object-top' />
+                                            }
                                             <div className='p-2 flex items-center justify-between'>
-                                                <div className='w-fit dark:text-minLight font-h1font text-xl'>{list.title}</div>
+                                                { isLoading ? <SkeletonLoader  className={` w-32 md:w-40 h-6 opacity-80 rounded-2xl `} /> : <div className='w-fit dark:text-minLight font-h1font text-xl'>{list.title}</div>}
                                                 <div className='flex items-center text-xl dark:text-textDark '>
                                                     <span
                                                         onClick={() => toggleLike(list.idkey)}
@@ -106,13 +113,15 @@ const Pages = () => {
                                                     <span>{list.shareicon}</span>
                                                 </div>
                                             </div>
+                                            {
+                                            isLoading ? <div className='pr-4' > <SkeletonLoader  className={`w-full mb-2 ml-2 h-3 opacity-50 rounded-2xl `} /> <SkeletonLoader  className={`w-full ml-2 h-3 opacity-50 rounded-2xl `} /></div> : 
                                             <ShowMore
                                                 className={`ml-2 dark:text-textMild text-sm font-paragrabhfont`}
                                                 text={list.paragrabh}
                                                 minWords={10}
                                                 maxWords={11}
                                                 key={index}
-                                            />
+                                            />}
                                         </div>
                                     ) : (
                                         <div></div>
