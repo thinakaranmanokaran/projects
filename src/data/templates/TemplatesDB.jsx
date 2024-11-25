@@ -2,7 +2,7 @@ import { CiShare1, CiHeart, CiBookmark, CiCirclePlus, CiShare2 } from "react-ico
 import { BiHeart, BiSolidHeart } from "react-icons/bi";
 
 import { Admin1, Admin2, Admin3, Admin4 } from "./../../assets/images/screenshots/templates/dashboard/index";
-import { LandingPage1 } from "../../assets/images/screenshots/templates/landing-pages";
+import { LandingPage1, ZooLandingPageImage, FruitsStoreImage } from "../../assets/images/screenshots/templates/landing-pages";
 import { PortfolioTemplate1, PortfolioTemplate2, PortfolioTemplate3, PortfolioTemplate4, PortfolioTemplate5, PortfolioTemplate6, PortfolioTemplate7, PortfolioTemplate8, PortfolioTemplate9 } from "../../assets/images/screenshots/templates/portfolios";
 
 const TemplateDB = [
@@ -195,7 +195,7 @@ const TemplateDB = [
         idkey: 303,
         lists: [
             {
-                title: "AI Hub Landing Page",
+                title: "AI Hub",
                 idkey: 3301,
                 img: `${LandingPage1}`,
                 paragrabh: "A modern landing page designed for AI startups, featuring sections for product features, team, testimonials, and a call-to-action for sign-ups or product demos.",
@@ -206,6 +206,32 @@ const TemplateDB = [
                 siteicon: <CiShare1 />,
                 site: "View Site",
                 sitelink: "https://thinakaranmanokaran.github.io/Templates/Landing-Pages/AI-Landing-Page/index.html"
+            },
+            {
+                title: "Zoo Adventure",
+                idkey: 3302,
+                img: `${ZooLandingPageImage}`,
+                paragrabh: "Explore the wonders of wildlife with this dynamic zoo landing page. Featuring a gallery of animals, ticket booking options, upcoming events, and visitor tips.",
+                favicon: <BiHeart />,
+                likedicon: <BiSolidHeart />,
+                bookicon: <CiBookmark />,
+                shareicon: <CiShare2 />,
+                siteicon: <CiShare1 />,
+                site: "View Site",
+                sitelink: "https://thinakaranmanokaran.github.io/Templates/Landing-Pages/Zoo-Landing-Page/index.html"
+            },
+            {
+                title: "Fruits Store",
+                idkey: 3303,
+                img: `${FruitsStoreImage}`,
+                paragrabh: "A vibrant landing page for a fruits store, highlighting fresh produce, weekly deals, delivery options, and an interactive shopping experience.",
+                favicon: <BiHeart />,
+                likedicon: <BiSolidHeart />,
+                bookicon: <CiBookmark />,
+                shareicon: <CiShare2 />,
+                siteicon: <CiShare1 />,
+                site: "View Site",
+                sitelink: "https://thinakaranmanokaran.github.io/Templates/Landing-Pages/Fruits-Store-Page/index.html"
             }
         ]
     },
