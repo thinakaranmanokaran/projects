@@ -2,7 +2,7 @@ import { CiShare1, CiHeart, CiBookmark, CiCirclePlus, CiShare2 } from "react-ico
 import { BiHeart, BiSolidHeart } from "react-icons/bi";
 
 import { Admin1, Admin2, Admin3, Admin4 } from "./../../assets/images/screenshots/templates/dashboard/index";
-import { LandingPage1, ZooLandingPageImage, FruitsStoreImage } from "../../assets/images/screenshots/templates/landing-pages";
+import { LandingPage1, ZooLandingPageImage, FruitsStoreImage , AirPodsLandingPageImage } from "../../assets/images/screenshots/templates/landing-pages";
 import { PortfolioTemplate1, PortfolioTemplate2, PortfolioTemplate3, PortfolioTemplate4, PortfolioTemplate5, PortfolioTemplate6, PortfolioTemplate7, PortfolioTemplate8, PortfolioTemplate9 } from "../../assets/images/screenshots/templates/portfolios";
 
 const TemplateDB = [
@@ -231,7 +231,20 @@ const TemplateDB = [
                 shareicon: <CiShare2 />,
                 siteicon: <CiShare1 />,
                 site: "View Site",
-                sitelink: "https://thinakaranmanokaran.github.io/Templates/Landing-Pages/Fruits-Store-Page/index.html"
+                sitelink: "https://thinakaranmanokaran.github.io/Fruit-Market/assets/index.html"
+            },
+            {
+                title: "AirPods Landing Page",
+                idkey: 3304,
+                img: `${AirPodsLandingPageImage}`,
+                paragrabh: "An elegant and sleek landing page designed to showcase AirPods. Highlights include product features, immersive audio experience, compatibility details, and purchase options.",
+                favicon: <BiHeart />,
+                likedicon: <BiSolidHeart />,
+                bookicon: <CiBookmark />,
+                shareicon: <CiShare2 />,
+                siteicon: <CiShare1 />,
+                site: "View Site",
+                sitelink: "https://thinakaranmanokaran.github.io/Templates/Landing-Pages/airpod-animation-web/index.html"
             }
         ]
     },
